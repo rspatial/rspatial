@@ -1,0 +1,12 @@
+Package: rspatial
+Type: Package
+Title: rspatial.org data
+Version: 1.0-0
+Date: 2018-08-26
+Depends: R (>= 3.0.0), raster
+Authors@R: c(
+	person("Robert J.", "Hijmans", role = c("cre", "aut"),  email = "r.hijmans@gmail.com"),
+	person("Alex", "Mandel", role = "ctb"))
+Description: Data to support the examples on rspatial.org
+License: GPL (>=3)
+LazyLoad: yes

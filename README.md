@@ -1,2 +1,2 @@
 # rspatial
-R package to support the rspatial,org website
+R package with data sets used in the https://rspatial,org website to teach spatial data analysis with R

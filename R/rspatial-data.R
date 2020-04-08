@@ -7,10 +7,10 @@
 sp_data <- function(name) {
 	
 	name <- name[1]
-	raster::extension(name) <- '.rds'
+	raster::extension(name) <- ".rds"
 	fn <- system.file(file.path("rds", name), package="rspatial")
 	if (!(file.exists(fn))) {
-		stop(paste(name, 'is not a valid data set name.'))
+		stop(paste(name, "is not a valid data set name."))
 	}
 	readRDS(fn)
 	
@@ -18,15 +18,15 @@ sp_data <- function(name) {
 
 
 
-sp_download <- function(files, path='data', url='https://biogeo.ucdavis.edu/data/rspatial/') {
+sp_download <- function(files, path="data", url="https://biogeo.ucdavis.edu/data/rspatial/") {
 	dir.create(path, showWarnings = FALSE)
 	for (filename in files) {
 		localfile <- file.path(path, filename)
 		if (!file.exists(localfile)) {
 			utils::download.file(paste0(url, filename), dest=localfile)
 		}
-		if (tolower(raster::extension(filename)) == '.zip') {
-			utils::unzip('data/rsdata.zip', exdir=path)
+		if (isTRUE(grep("\\.zip$", filename)) {
+			utils::unzip("data/rsdata.zip", exdir=path)
 		}
 	}
 }

@@ -25,7 +25,7 @@ sp_download <- function(files, path="data", url="https://biogeo.ucdavis.edu/data
 		if (!file.exists(localfile)) {
 			utils::download.file(paste0(url, filename), dest=localfile)
 		}
-		if (isTRUE(grep("\\.zip$", filename)) {
+		if (isTRUE(grep("\\.zip$", filename))) {
 			utils::unzip("data/rsdata.zip", exdir=path)
 		}
 	}
